@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+@import url("https://use.typekit.net/nht2qve.css");
+
+:root {
+    --font-family: "muli", sans-serif;
+
+    --text-color-1:#232323;
+    --text-color-2:#616161;
+    --text-color-3:#00415f;
+    --icon-color:#00415f;
+    --bg-1:#f9f9f9;
+    --bg-2:#ffffff;
+    --bg-3:#00415f;
+    --bg-4:#181b2d;
+    --bg-5:#232435;
+    --padding-inline: 0 1rem;
+    /*
+    --text-color-1:#ffffff;
+    --bg-1:#181b2d;
+    --bg-2:#232435;
+    */
+}  
+
+*,::before,::after{
+    box-sizing: border-box;
+  }
+  
+html{
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    color: var(--text-color-1);
+}
+
+body{
+    background-color: var(--bg-1);
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    padding: 1rem;
+    border: 5px solid var(--bg-1);
+    border-radius: 7px;
+    text-align: left;
+}
+
+th, td{
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+th{
+    border-bottom: solid 1px var(--bg-1);
+}
+
+
+#title{
+    margin-bottom: 0;
+}
+
+#sub-title{
+    font-style: italic;
+    margin-top: 0;
+    color: var(--icon-color);
+    font-size: 1rem;
+    font-weight: 300;
+    content: "Making Great Things!";
+}
+
+.main{
+    padding: var(--padding-inline);
+}
+
+.main-blue{
+    padding: var(--padding-inline);
+}
+
+.section-title{
+    position: relative;
+    text-align: center;
+}
+
+h2.section-title{
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+.section-header{
+    background-color:var(--bg-2);
+    border-radius: 8px;
+    background-color: var(--bg-2);
+    padding: 2rem;
+    box-shadow: 2px 10px 50px rgb(158 158 158 / 25%);
+}
+
+.section-header p{
+    color: var(--text-color-2);
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: justify;
+}
+
+.section-header span{
+    display: flex;
+    align-items: center;
+}
+
+.section-header span i{
+    font-size: 2rem;
+    padding-bottom: 5px;
+    color: var(--icon-color);
+}
+
+.section-header span h3::after{
+    font-size: 1.5rem;
+    content: "DNP3(Distributed Network Protocol version 3)";
+}
+
+
+#another-title::after{
+    content: "";
+}
+
+#another-title{
+    font-size: 1.5rem;
+}
+
+.section-flex{
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.section-flex > *{
+    flex-basis: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bg-2);
+    background-color:var(--bg-3);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 2px 10px 50px rgb(158 158 158 / 25%);
+}
+
+.card span{
+    display: flex;
+    align-items: center;
+}
+
+.card span i{
+    padding-bottom: 5px;
+    font-size: 2rem;
+}
+
+.information{
+    background-color: transparent;
+    color: var(--text-color-1);
+}
+
+.information i{
+    color: var(--text-color-3);
+}
+
+.information p{
+    text-align: justify;
+}
+
+.darker{
+    background-color: var(--bg-5);
+    text-align: justify;
+}
+
+.darker div{
+    display: flex;
+}
+
+.darker div p{
+    background-color: var(--bg-4);
+    border-radius: 7px;
+    padding: 1rem;
+    box-shadow: 2px 2px 20px 1px black;
+}
+
+.darker div > * + * {
+    margin-left:1rem ;
+}
+
+.class{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.class div{
+    padding-inline: 1rem;
+    background-color: var(--bg-1);
+    color: var(--text-color-3);
+    border-radius: 7px;
+    width: 100%;
+}
+
+.variation-structure div{
+    background-color: var(--bg-1);
+    border-radius: 7px;
+    color: var(--text-color-3);
+    padding: 1rem;
+}
+
+.variation-structure div h3{
+    padding-inline: 1rem;
+    margin: 0;
+}
+
+.variation p{
+    background-color: var(--bg-3);
+    color: var(--bg-2);
+    padding: .5rem;
+    border-radius: 7px;
+}
+
+.nofirst{
+    margin-top: 1rem;
+}
+
+#modular-structure p{
+    text-align: center;
+    background-color: var(--bg-2);
+    border-radius: 7px;
+    color: var(--text-color-3);
+    padding: 0.9rem 2rem;
+}
+
+#link-layer{
+    padding: 0 1rem 1rem 1rem;
+    background-color: var(--bg-2);
+    border-radius: 7px;
+}
+
+#channels{
+    display: flex;
+    gap: 1rem;
+}
+
+#channels p{
+    color: var(--bg-2);
+    background-color: var(--bg-3);
+    font-size: 0.8rem;
+}
+
+#data-type{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#data-type div{
+    background-color: var(--bg-2);
+    color: var(--bg-3);
+    border-radius: 7px;
+}
+
+#data-type div span i{
+    padding-inline: 1rem;
+}
+
+.topo{
+    justify-content: center;
+}
+
+.topo i{
+    font-size: 3rem;
+}
+
+.topo div{
+    display: flex;
+}
+
+.graph .main-graph{
+    width: 100%;
+    border-radius: 7px;
+    padding: 0 1rem 0 1rem;
+    color: var(--text-color-1);
+    background-color: var(--bg-2);
+}
+
+.graph .main-graph p{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.graph .sub-graph p{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+.graph .sub-graph{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.graph .sub-graph > * {
+    color: var(--text-color-1);
+    flex-basis: 100%;
+    background-color: var(--bg-2);
+    border-radius: 7px;
+}
+
+
+
+
+@media screen and (max-width: 968px){
+    .section-header span{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-header span i{
+        font-size: 4rem;
+    }
+
+    .section-header span h3::after{
+        font-size: 1.5rem;
+        content: "DNP3";
+    }
+
+    .section-flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-flex > * + * {
+        margin-left: 0;
+    }
+
+    #channels{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .darker div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .darker div > * + * {
+        margin-left:0 ;
+    }
+
+    .topo div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .graph .sub-graph{
+        flex-direction: row;
+    }
+    
+}

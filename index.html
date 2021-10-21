@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>DNP3</title>
+</head>
+<body>
+    <section class="main">
+        <div class="section-title">
+            <h2 id="title" class="section-title">Axon Group</h2>
+            <h2 id="sub-title">Making Great Things!</h2>
+        </div>
+    
+    
+        <div class="section-header">
+            <span>
+                <i class='bx bx-station'></i>
+                <h3></h3>
+            </span>
+            <p>Es un protocolo desarrollado para alcanzar interoperabilidad abierta 
+                y estándar entre elementos de subestaciones,y las estaciones principales
+                 de las compañias eléctricas. Los protocolos existentes carecian de <b>estampa de tiempo.</b>
+                 DNP ha sido ampliamente usado en grandes industrias dedicadas al tratamietno de aguas,petróleo y
+                gas.
+            </p>
+        </div>
+
+        <div class="section-flex">
+            <div class="card">
+                <span>
+                    <i class='bx bxs-layout'></i><h3>Estructura Modular</h3>
+                </span>
+                <div id="modular-structure">
+                    <p>User Application</p>
+                    <p>Application Layer</p>
+                    <p>Transport Function</p>
+                    <div id="link-layer">
+                        <p>Link Layer</p>
+                        <div id="channels">
+                            <p>SERIAL CHANNEL</p>
+                            <p>TCP/IP CHANNEL</p>
+                            <p>UDP/IP CHANNEL</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bx-text'></i><h3>ipos de datos básicos en DNP3</h3>
+                </span>
+
+                <div id="data-type">
+                    <div>
+                        <span><i class='bx bx-cube'></i><p>Entrada binarias</p></span>
+                    </div>
+                    <div>
+                        <span><i class='bx bx-cube'></i><p>Salidas binarias</p></span>
+                    </div>
+                    <div>
+                        <span><i class='bx bx-cube'></i><p>Entrada Analógicas</p></span>
+                    </div>
+                    <div>
+                        <span><i class='bx bx-cube'></i><p>Salida Analógicas</p></span>
+                    </div> 
+                    
+                    <div>
+                        <span class="icon-p"><i class='bx bxs-cube'></i><p>Contadores</p></span>
+                    </div>
+                    <div>
+                        <span class="icon-p"><i class='bx bxs-cube'></i><p>Entrada binaria doble</p></span>
+                    </div>
+                </div>
+               
+                
+
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>Cada dato DNP3 dentro de la base de datos de una estación remota se denomina Punto y se identifica por un Índice.
+                    El valor actual del punto se denomina valor estático.
+                    El punto puede generar eventos por cambios de valor o ante la recepción de comandos. Los eventos pueden almacenarse en una de las 3 clases que permite DNP3 (Clase 1, Clase 2 o Clase 3).</p>
+            </div>
+
+
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker">
+                <span>
+                    <i class='bx bxs-layer' ></i><h3>Clases en DNP3</h3>
+                </span>
+
+                <div>
+                    <p>Class 0 <br>Static Value</p>
+                    <p>Class 1 <br>Events</p>
+                    <p>Class 2 <br>Events</p>
+                    <p>Class 3 <br>Events</p>
+                </div>
+
+                <p>Las clases en DNP3 permiten agrupar los eventos en tres niveles diferentes (recurso útil para priorizar el esquema de peticiones del maestro). Las peticiones por clase permiten el polling por eventos. Un caso excepcional es la clase 0, mediante la cual el maestro puede solicitar al esclavo el envío de todos los valores estáticos configurados en su base de datos.</p>
+            </div>
+            <div class="card class">
+                <div>
+                    <span>
+                        <i class='bx bxs-search-alt-2'></i><p>Para identificar el formato de un punto de la base de datos de DNP3 dentro de un mensaje se usan 3 propiedades:</p>
+                    </span>
+                </div>
+
+                <div><span><i class='bx bx-search-alt-2' ></i><p><b>Grupo: </b>Identifica el tipo de información que viaja en el mensaje. Por ejemplo, valor actual de entrada binaria.</p></span></div>
+                <div><span><i class='bx bx-search-alt-2' ></i><p><b>Variación: </b>formato de la información que indica si viaja la calidad y/o marca de tiempo o el formato de los datos analógos</p></span></div>
+                <div><span><i class='bx bx-search-alt-2' ></i><p><b>Índice: </b>dirección en la base de datos.</p></span></div>
+            </div>
+        </div>
+
+        <div class="section-flex">
+            <div class="card class">
+                <span>
+                    <i class='bx bxs-extension' ></i><h3>Interoperabilidad</h3>
+                </span>
+
+                <div><span><i class='bx bx-extension' ></i><p><b>Nivel 1:
+                </b>Esta es la funcionalidad mínima que debe implementar un maestro o una estación remota para que sea compatible con DNP3. La funcionalidad será bastante básica y solo está destinada a un pequeño dispositivo de campo.</p></span>
+                </div>
+                <div><span><i class='bx bx-extension' ></i><p><b>Nivel 2:
+                </b>Esto agrega varios códigos de función y objetos para admitir una RTU simple o un concentrador de datos.</p></span>
+                </div>
+                <div><span><i class='bx bx-extension' ></i><p><b>Nivel 3:
+                </b>Esto agrega códigos de función y objetos adicionales, especialmente habilitar / deshabilitar los mensajes no solicitados, para admitir RTU / data concentrator complejos.</p></span>
+                </div>
+                <div><span><i class='bx bx-extension' ></i><p><b>Nivel 4:
+                </b>Esto agrega características de uso poco frecuente, como variaciones analógicas de punto flotante, entradas binarias de doble bit y atributos de dispositivo.</p></span>
+                </div>
+
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Grupos en DNP3</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>Group Range</th>
+                        <th>Object Group Description</th>
+                    </tr>
+                    <tr>
+                        <td>0-9</td>
+                        <td>Binary Input Objects</td>
+                    </tr>
+                    <tr>
+                        <td>10-19</td>
+                        <td>Binary Output Objects</td>
+                    </tr>
+                    <tr>
+                        <td>20-29</td>
+                        <td>Counter Objects</td>
+                    </tr>
+                    <tr>
+                        <td>30-39</td>
+                        <td>Analog Input Objects</td>
+                    </tr>
+                    <tr>
+                        <td>40-49</td>
+                        <td>Analog Output Objects</td>
+                    </tr>
+                    <tr>
+                        <td>50-59</td>
+                        <td>Time Objects</td>
+                    </tr>
+                    <tr>
+                        <td>60-69</td>
+                        <td>Class Objects</td>
+                    </tr>
+                    <tr>
+                        <td>70-79</td>
+                        <td>File Objects</td>
+                    </tr>
+                    <tr>
+                        <td>80-89</td>
+                        <td>Devide Objects</td>
+                    </tr>
+                    <tr>
+                        <td>90-99</td>
+                        <td>Application Objects</td>
+                    </tr>
+                    <tr>
+                        <td>+100</td>
+                        <td>Alternate Numeric Objects</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bxs-bar-chart-alt-2'></i><h3>Ejemplo variaciones en DNP3</h3>
+                </span>
+
+                <div class="variation-structure">
+                    <div>
+                        <h3>Grupo 1</h3>
+                        <div class="variation">
+                            <p><b>Variation:</b>01</p>
+                            <p><b>Type:</b>Static</p>
+                            <p><b>Description:</b>Binary Input:(single-bit)</p>
+                            <p><b>Structure:</b>Packed Binary</p>
+                        </div>
+
+                        <div class="variation">
+                            <p><b>Variation:</b>02</p>
+                            <p><b>Type:</b>Static</p>
+                            <p><b>Description:</b>Binary Input with status</p>
+                            <p><b>Structure:</b>Flag 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header nofirst">
+            <span>
+                <i class='bx bx-network-chart'></i>
+                <h3 id="another-title">Topologia</h3>
+            </span>
+            <span>
+                <p>Mapa lógico de la red para intercambiar datos.</p><i style="color: #303030;" class='bx bx-desktop'></i><p>(Master)</p>
+                <i style="color: #303030;" class='bx bxs-book-content'></i><p>(Outstation)</p>
+            </span>
+        </div>
+
+        <section class="section-flex">
+            <div class="card darker topo">
+                <i class='bx bx-desktop'></i>
+                <i class='bx bx-down-arrow-alt'></i>
+                <i class='bx bxs-book-content'></i>
+                <p>Directa o Punto a Punto</p>
+            </div>
+
+            
+
+            <div class="card darker topo">
+                <i class='bx bx-desktop'></i>
+                <i class='bx bx-down-arrow-alt'></i>
+                <div>
+                    <i class='bx bxs-book-content'></i>
+                    <i class='bx bxs-book-content'></i>
+                    <i class='bx bxs-book-content'></i>
+                </div> 
+                <p>Multi-Drop</p>
+            </div>
+
+            <div class="card darker topo">
+                <div>
+                    <i class='bx bx-desktop'></i>
+                    <i class='bx bx-desktop'></i>
+                </div>
+                <i class='bx bx-down-arrow-alt'></i>
+                <i class='bx bxs-book-content'></i>
+                <p>Multiple-Master(Una de las premisas de DNP3 la cual permite tener varios maestros a un esclavo).</p>
+            </div>
+            <div class="card darker topo">
+                <i class='bx bx-desktop'></i>
+                <i class='bx bx-down-arrow-alt'></i>
+                <div>
+                    <i class='bx bxs-book-content'></i>
+                    <i class='bx bxs-book-content'></i>
+                </div> 
+                <div>
+                    <i class='bx bx-down-arrow-alt' style="color: #232435;"></i>
+                    <i class='bx bx-down-arrow-alt'></i>
+                </div>
+                <div>
+                    <i class='bx bxs-book-content' style="color: #232435;"></i>
+                    <i class='bx bxs-book-content'></i>
+                </div> 
+                <p>Jerárquica(en esta topologia una subestacion se convierte en un data concentrator).</p>
+            </div>
+
+        </section>
+
+        <div class="section-header nofirst">
+            <span>
+                <i class='bx bx-terminal' ></i>
+                <h3 id="another-title">Capa de Aplicación</h3>
+            </span>
+            <p>La capa de aplicación define Funciones (servicios) que se intercambian entre estaciones controladoras (Master) y estaciones remotas (Outstation),en esta capa tambien se realiza la fragmentacion a nivel de usuario.<br><b>Las funciones básicas de DNP3 son:</b></p>
+        </div>
+
+        <section class="section-flex">
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>READ</h3>
+                </span>
+                <p>Lectura de valor estático o eventos.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>WRITE</h3>
+                </span>
+                <p>Escritura de atributos del equipo.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>SELECT</h3>
+                </span>
+                <p>Servicio de control de selección.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>OPERATE</h3>
+                </span>
+                <p>Orden tras selección.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>DIRECT_OPERATE</h3>
+                </span>
+                <p>Orden directa sin selección.</p>
+            </div>
+        </section>
+
+        <section class="section-flex">
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>IMMED_FREEZE</h3>
+                </span>
+                <p>Orden de congelado inmediato.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>FREZZE_CLEAR</h3>
+                </span>
+                <p>Congelado y reset a 0.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>COLD_RESTART</h3>
+                </span>
+                <p>Reset total de la estación remota.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>WARM_RESTART</h3>
+                </span>
+                <p>Reset parcial de la estación remota.</p>
+            </div>
+        </section>
+
+        <section class="section-flex">
+            
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>ENABLE<br>UNSOLICITED</h3>
+                </span>
+                <p>Se usan en e.remotas modernas para activar el envío espontáneo.</p>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>DISABLE<br>UNSOLICITED</h3>
+                </span>
+                <p>Se usan en e.remotas modernas para desactivar el envió espontáneo. Si se desactiva la recogida de eventos se realiza por lectura de clase 1, 2,3.</p>
+            </div>
+            <div class="card">
+                <span>
+                    <i class='bx bx-pyramid'></i><h3>ASSIGN<br>CLASS</h3>
+                </span>
+                <p>Permite asignar a cada punto o tipo de punto una clase para los eventos que genera. Por lo general la e.remota ya los organiza,
+                     pero este servicio si se implementa le permite al master cambiar este orden.</p>
+            </div>
+        </section>
+
+        <div class="section-header nofirst">
+            <span>
+                <i class='bx bx-terminal' ></i>
+                <h3 id="another-title">Capa de Aplicación | Fragmentación </h3>
+            </span>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Mensaje de usuario 4096 Bytes</p></div>
+                <div class="sub-graph">
+                    <div><p>Fragmento<br>2048B</p></div>
+                    <div><p>Fragmento<br>2048B</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>En la capa de aplicacion los mensajes de usuario se divien en fragmentos,cada fregmento va tener <b>2048 bytes.</b></p>
+            </div>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Fragmento</p></div>
+                <div class="sub-graph">
+                    <div style="max-width: 40%;"><p>APCI</p></div>
+                    <div><p>ASDU</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>A Cada Fragmento se le agrega una cabecera denominada <b>ACPI.</b><br>
+                Esta cabecera puede ser una <b>Request Header</b> o una <b>Respone Header</b>,esto dependiendo si es una tarea o una respuesta.</p>
+            </div>
+        </div>
+
+        <div class="section-flex">
+
+            <div class="card darker graph ">
+                <div class="sub-graph">
+                    <div><p>APCI</p></div>
+                </div>
+                <h2>Request Header</h2>
+                <div class="sub-graph">
+                    <div><p>AC</p></div>
+                    <div><p>FC</p></div>
+                </div>
+                <h2>Response Header</h2>
+                <div class="sub-graph">
+                    <div><p>AC</p></div>
+                    <div><p>FC</p></div>
+                    <div><p>IIN</p></div>
+                </div>
+            </div>
+
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p><b>AC: </b>Application Control<br>
+                   <b>FC: </b>Function Code<br>
+                   <b>INN: </b>Internal Indications (MSB/LSB)<br>
+                
+                </p>
+            </div>
+        </div>
+
+        <section class="section-flex">
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Request Function Codes</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>General Type</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Transfer</td>
+                        <td>Confirm</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>Read</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>Write</td>
+                    </tr>
+                    <tr>
+                        <td>3-6</td>
+                        <td>Control Func</td>
+                    </tr>
+                    <tr>
+                        <td>7-12</td>
+                        <td>Frezze Func</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13-18</td>
+                        <td>App Control Func</td>
+                    </tr>
+                    <tr>
+                        <td>19-22</td>
+                        <td>Config Func</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Time Sync</td>
+                    </tr>
+                    <tr>
+                        <td>24-126</td>
+                        <td>Reserved</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Response Function Codes</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>General Type</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Response Func</td>
+                        <td>Confirm</td>
+                    </tr>
+                    <tr>
+                        <td>129</td>
+                        <td>-</td>
+                        <td>Read</td>
+                    </tr>
+                    <tr>
+                        <td>130</td>
+                        <td>-</td>
+                        <td>Unsolicited <br> Message</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Internal Indications</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>General Type</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Response Func</td>
+                        <td>Confirm</td>
+                    </tr>
+                    <tr>
+                        <td>129</td>
+                        <td>-</td>
+                        <td>Read</td>
+                    </tr>
+                    <tr>
+                        <td>130</td>
+                        <td>-</td>
+                        <td>Unsolicited <br> Message</td>
+                    </tr>
+                </table>
+            </div>
+    </section>
+
+    
+
+
+    
+    
+
+    
+</body>
+</html>
