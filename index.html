@@ -140,86 +140,9 @@
                 </div>
 
             </div>
-            <div class="card">
-                <span>
-                    <i class='bx bx-hive'></i><h3>Grupos en DNP3</h3>
-                </span>
-                <table>
-                    <tr>
-                        <th>Group Range</th>
-                        <th>Object Group Description</th>
-                    </tr>
-                    <tr>
-                        <td>0-9</td>
-                        <td>Binary Input Objects</td>
-                    </tr>
-                    <tr>
-                        <td>10-19</td>
-                        <td>Binary Output Objects</td>
-                    </tr>
-                    <tr>
-                        <td>20-29</td>
-                        <td>Counter Objects</td>
-                    </tr>
-                    <tr>
-                        <td>30-39</td>
-                        <td>Analog Input Objects</td>
-                    </tr>
-                    <tr>
-                        <td>40-49</td>
-                        <td>Analog Output Objects</td>
-                    </tr>
-                    <tr>
-                        <td>50-59</td>
-                        <td>Time Objects</td>
-                    </tr>
-                    <tr>
-                        <td>60-69</td>
-                        <td>Class Objects</td>
-                    </tr>
-                    <tr>
-                        <td>70-79</td>
-                        <td>File Objects</td>
-                    </tr>
-                    <tr>
-                        <td>80-89</td>
-                        <td>Devide Objects</td>
-                    </tr>
-                    <tr>
-                        <td>90-99</td>
-                        <td>Application Objects</td>
-                    </tr>
-                    <tr>
-                        <td>+100</td>
-                        <td>Alternate Numeric Objects</td>
-                    </tr>
-                </table>
-            </div>
+           
 
-            <div class="card">
-                <span>
-                    <i class='bx bxs-bar-chart-alt-2'></i><h3>Ejemplo variaciones en DNP3</h3>
-                </span>
-
-                <div class="variation-structure">
-                    <div>
-                        <h3>Grupo 1</h3>
-                        <div class="variation">
-                            <p><b>Variation:</b>01</p>
-                            <p><b>Type:</b>Static</p>
-                            <p><b>Description:</b>Binary Input:(single-bit)</p>
-                            <p><b>Structure:</b>Packed Binary</p>
-                        </div>
-
-                        <div class="variation">
-                            <p><b>Variation:</b>02</p>
-                            <p><b>Type:</b>Static</p>
-                            <p><b>Description:</b>Binary Input with status</p>
-                            <p><b>Structure:</b>Flag 1</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="section-header nofirst">
@@ -504,7 +427,7 @@
                 <span>
                     <i class='bx bx-hive'></i><h3>Response Function Codes</h3>
                 </span>
-                <table>
+                    <table>
                     <tr>
                         <th>Code</th>
                         <th>General Type</th>
@@ -527,97 +450,335 @@
                     </tr>
                 </table>
             </div>
-    </section>
+        </section>
 
-    <section class="section-flex">
-        <div class="card">
-            <span>
-                <i class='bx bx-hive'></i><h3>Internal Indications</h3>
-            </span>
-            <table>
-                <tr>
-                    <th>LSB</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>IIN1.0</td>
-                    <td>All stations</td>
-                </tr>
-                <tr>
-                    <td>IIN1.1</td>
-                    <td>Class 1 events</td>
-                </tr>
-                <tr>
-                    <td>IIN1.2</td>
-                    <td>Class 2 events</td>
-                </tr>
-                <tr>
-                    <td>IIN1.3</td>
-                    <td>Class 3 events</td>
-                </tr>
-                <tr>
-                    <td>IIN1.4</td>
-                    <td>Need Time</td>
-                </tr>
-                <tr>
-                    <td>IIN1.5</td>
-                    <td>Local Control</td>
-                </tr>
-                <tr>
-                    <td>IIN1.6</td>
-                    <td>Device Trouble</td>
-                </tr>
-                <tr>
-                    <td>IIN1.7</td>
-                    <td>Device Restart</td>
-                </tr>
-            </table>
+
+
+        <section class="section-flex">
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Internal Indications</h3>
+                </span>
+                    <table>
+                    <tr>
+                        <th>LSB</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>IIN1.0</td>
+                        <td>All stations</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.1</td>
+                        <td>Class 1 events</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.2</td>
+                        <td>Class 2 events</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.3</td>
+                        <td>Class 3 events</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.4</td>
+                        <td>Need Time</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.5</td>
+                        <td>Local Control</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.6</td>
+                        <td>Device Trouble</td>
+                    </tr>
+                    <tr>
+                        <td>IIN1.7</td>
+                        <td>Device Restart</td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Internal Indications</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>MSB</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>IIN2.0</td>
+                        <td>Func Code <br>Not Supported</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.1</td>
+                        <td>Object Unknown</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.2</td>
+                        <td>Paramenter error</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.3</td>
+                        <td>Event Buffer <br>Overflow</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.4</td>
+                        <td>Already <br>Executing</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.5</td>
+                        <td>Config Corrupt</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.6</td>
+                        <td>Reserved 1</td>
+                    </tr>
+                    <tr>
+                        <td>IIN2.7</td>
+                        <td>Reserved 2</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Application Control ( AC )</p></div>
+                <div class="sub-graph">
+                    <div><p>Fir</p></div>
+                    <div><p>Fin</p></div>
+                    <div><p>Con</p></div>
+                    <div><p>Seq</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>
+                    <br><b>FIR</b>= Primer mensaje en una secuencia.
+                    <br><b>FIN</b> = Ultimo mensaje en una secuencia.
+                    <br><b>CON</b> = El mensaje requiere confirmacion.
+                    <br><b>UNS</b> = El mensaje es no solicitado.
+                    <br><b>SEQ</b> = numero de secuencia (0 a 15).
+                </p>
+            </div>
         </div>
 
-        <div class="card">
-            <span>
-                <i class='bx bx-hive'></i><h3>Internal Indications</h3>
-            </span>
-            <table>
-                <tr>
-                    <th>MSB</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>IIN2.0</td>
-                    <td>Func Code<br> Not Supported</td>
-                </tr>
-                <tr>
-                    <td>IIN2.1</td>
-                    <td>Object Unknown</td>
-                </tr>
-                <tr>
-                    <td>IIN2.2</td>
-                    <td>Paramenter error</td>
-                </tr>
-                <tr>
-                    <td>IIN2.3</td>
-                    <td>Event Buffer Overflow</td>
-                </tr>
-                <tr>
-                    <td>IIN2.4</td>
-                    <td>Already Executing</td>
-                </tr>
-                <tr>
-                    <td>IIN2.5</td>
-                    <td>Config Corrupt</td>
-                </tr>
-                <tr>
-                    <td>IIN2.6</td>
-                    <td>Reserved 1</td>
-                </tr>
-                <tr>
-                    <td>IIN2.7</td>
-                    <td>Reserved 2</td>
-                </tr>
-            </table>
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>ASDU</p></div>
+                <div class="sub-graph">
+                    <div><p>OH</p></div>
+                    <div><p>DO</p></div>
+                    <div><p>OH</p></div>
+                    <div><p>DO</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>
+                    <br><b>OH</b>= Object Header.
+                    <br><b>DO</b> = Data Objects.
+                    <br>Esta secuencia se repite hasta completar el total de data enviado.
+                </p>
+            </div>
         </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Object Header</p></div>
+                <div class="sub-graph">
+                    <div><p>O</p></div>
+                    <div><p>Q</p></div>
+                    <div><p>R</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>
+                    <br><b>O</b>= Object.
+                    <br><b>Q</b> = Qualifer.
+                    <br><b>R</b> = Range(0-8).
+                </p>
+            </div>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Object</p></div>
+                <div class="sub-graph">
+                    <div><p>Object Group</p></div>
+                    <div><p>Object Variation</p></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bx-hive'></i><h3>Grupos en DNP3</h3>
+                </span>
+                <table>
+                    <tr>
+                        <th>Group Range</th>
+                        <th>Object Group Description</th>
+                    </tr>
+                    <tr>
+                        <td>0-9</td>
+                        <td>Binary Input Objects</td>
+                    </tr>
+                    <tr>
+                        <td>10-19</td>
+                        <td>Binary Output Objects</td>
+                    </tr>
+                    <tr>
+                        <td>20-29</td>
+                        <td>Counter Objects</td>
+                    </tr>
+                    <tr>
+                        <td>30-39</td>
+                        <td>Analog Input Objects</td>
+                    </tr>
+                    <tr>
+                        <td>40-49</td>
+                        <td>Analog Output Objects</td>
+                    </tr>
+                    <tr>
+                        <td>50-59</td>
+                        <td>Time Objects</td>
+                    </tr>
+                    <tr>
+                        <td>60-69</td>
+                        <td>Class Objects</td>
+                    </tr>
+                    <tr>
+                        <td>70-79</td>
+                        <td>File Objects</td>
+                    </tr>
+                    <tr>
+                        <td>80-89</td>
+                        <td>Devide Objects</td>
+                    </tr>
+                    <tr>
+                        <td>90-99</td>
+                        <td>Application Objects</td>
+                    </tr>
+                    <tr>
+                        <td>+100</td>
+                        <td>Alternate Numeric Objects</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <span>
+                    <i class='bx bxs-bar-chart-alt-2'></i><h3>Ejemplo variaciones en DNP3</h3>
+                </span>
+
+                <div class="variation-structure">
+                    <div>
+                        <h3>Grupo 1</h3>
+                        <div class="variation">
+                            <p><b>Variation:</b>01</p>
+                            <p><b>Type:</b>Static</p>
+                            <p><b>Description:</b>Binary Input:(single-bit)</p>
+                            <p><b>Structure:</b>Packed Binary</p>
+                        </div>
+
+                        <div class="variation">
+                            <p><b>Variation:</b>02</p>
+                            <p><b>Type:</b>Static</p>
+                            <p><b>Description:</b>Binary Input with status</p>
+                            <p><b>Structure:</b>Flag 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-header nofirst">
+            <span>
+                <i class='bx bx-mail-send' ></i>
+                <h3 id="another-title">Capa de Transporte(seudo-transporte) | Segmentación</h3>
+            </span>
+            <p>La función de transporte «trocea» los fragmentos en el extremo transmisor y los «ensambla» en el extremo receptor. A nivel de función de transporte se usa el término 'segmento'.</b></p>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Fragmento</p></div>
+                <div class="sub-graph">
+                    <div><p>Segm 249B</p></div>
+                    <div><p>Segm 249B</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>Si los fragmentos son mayores a <b>249 Bytes</b> estos se segmentan.</p>
+            </div>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Segmento</p></div>
+                <div class="sub-graph">
+                    <div style="max-width: 30%;"><p>TH</p></div>
+                    <div><p>CF</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>Cada segmento lleva un conjunto de bytes del fragmento <b>(CF)</b> y se le agrega una cabecera de transporte denominada <b>TH</b>.</p>
+            </div>
+        </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>TH</p></div>
+                <div class="sub-graph">
+                    <div><p>Fir</p></div>
+                    <div><p>Fin</p></div>
+                    <div><p>Seq</p></div>
+                </div>
+            </div>
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>
+                    <br><b>FIR</b>= Primer mensaje en una secuencia.
+                    <br><b>FIN</b> = Ultimo mensaje en una secuencia.
+                    <br><b>SEQ</b> = Numero de secuencia.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="section-header nofirst">
+            <span>
+                <i class='bx bx-mail-send' ></i>
+                <h3 id="another-title"> Capa de enlace</h3>
+            </span>
+            <p>La capa de enlace se encarga de tareas de direccionamiento y detección de errores (CRC).</b></p>
+        </div>
+
     </section>
+
+ 
+
+    
     
 
 
