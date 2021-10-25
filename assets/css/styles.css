@@ -31,6 +31,9 @@ html{
     color: var(--text-color-1);
 }
 
+
+
+
 body{
     background-color: var(--bg-1);
     margin: 0;
@@ -47,6 +50,10 @@ table{
 th, td{
     padding-bottom: 1rem;
     text-align: left;
+}
+
+a{
+    text-decoration: none;
 }
 
 th{
