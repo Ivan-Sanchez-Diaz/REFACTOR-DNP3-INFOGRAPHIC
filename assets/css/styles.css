@@ -317,7 +317,22 @@ h2.section-title{
     border-radius: 7px;
 }
 
+#split{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
 
+#split > * {
+    background-color: var(--bg-2);
+    border-radius: 7px;
+    flex-basis: 100%;
+    color: var(--text-color-1);
+}
+
+#split > * + *{
+    margin-left: 1rem;
+}
 
 
 @media screen and (max-width: 968px){
@@ -368,5 +383,10 @@ h2.section-title{
     .graph .sub-graph{
         flex-direction: row;
     }
-    
+
+    #main-split{
+        flex-direction: column;
+    }
+
+   
 }

@@ -771,8 +771,51 @@
                 <i class='bx bx-mail-send' ></i>
                 <h3 id="another-title"> Capa de enlace</h3>
             </span>
-            <p>La capa de enlace se encarga de tareas de direccionamiento y detección de errores (CRC).</b></p>
+            <p>La capa de enlace se encarga de tareas de direccionamiento y detección de errores (CRC),a los segmentos se les agrega una trama de enlace con su respectivos CRCs y son enviados a su direccion de destino.</b></p>
         </div>
+
+        <div class="section-flex">
+            <div class="card darker graph ">
+                <div class="main-graph"><p>Segmento</p></div>
+                <div class="sub-graph" id="main-split">
+                    <div id="split">
+                        <div><p>Ox05<br>1B</p></div>
+                        <div><p>Ox65<br>1B</p></div>
+                    </div>
+                    <div id="split">
+                        <div><p>Long Trama<br>1B</p></div>
+                        <div><p>Code Control<br>1B</p></div>
+                    </div>
+                    <div id="split">
+                        <div><p>Destino<br>2B</p></div>
+                        <div><p>Origen<br>2B</p></div>
+                        <div><p>CRC<br>2B</p></div>
+                    </div>
+                    <div id="split">
+                        <div><p>Datos</p></div>
+                        <div><p>CRC<br>(16B)</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-flex">
+            <div class="card information">
+                <span>
+                    <i class='bx bxs-bulb'></i>
+                </span>
+                <p>Cabecera Enlace DNP3 - Son los diez primeros bytes de la trama:
+                    <br><b>2 Bytes de inicio.</b>Cuyo valor es fijo(0x05,0x65).
+                    <br><b>1 Byte con el tamaño de la trama.</b>No tiene en cuenta la cabecera, ni los CRC
+                    <br><b>1 Byte con el codigo de control</b>
+                    <br><b>2 bytes con la direccion de destino.</b>
+                    <br><b>2 bytes con la direccion de origen.</b>
+                    <br><b>2 bytes de CRC.</b>
+                    <br><b>Datos.</b> cada 16 bytes de datos,asi como al final de la trama, se encontrara 2 bytes de CRC
+    
+                </p>
+            </div>
+        </section>
 
     </section>
 
